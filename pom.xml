@@ -89,17 +89,18 @@
                         </goals>
                         <phase>initialize</phase>
                     </execution>
+                    <execution>
+                        <id>install frontend dependencies</id>
+                        <goals>
+                            <goal>npx</goal>
+                        </goals>
+                        <configuration>
+                            <arguments>pnpm install</arguments>
+                        </configuration>
+                    </execution>
                 </executions>
                 <configuration>
                     <nodeVersion>v12.13.0</nodeVersion>
-                </configuration>
-            </plugin>
-            <plugin>
-                <groupId>com.vaadin</groupId>
-                <artifactId>vaadin-maven-plugin</artifactId>
-                <version>${vaadin.version}</version>
-                <configuration>
-                    <pnpmEnable>false</pnpmEnable>
                 </configuration>
             </plugin>
             <plugin>
